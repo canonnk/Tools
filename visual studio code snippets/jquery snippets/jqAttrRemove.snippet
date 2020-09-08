@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.6.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>jqAttrRemove</Title>
+      <Author>John Sheehan (@johnsheehan)</Author>
+      <Description>Remove an attribute from each element in the set of matched elements.</Description>
+      <HelpUrl>https://github.com/kspearrin/Visual-Studio-jQuery-Code-Snippets</HelpUrl>
+      <Shortcut>jqAttrRemove</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>selector</ID>
+          <ToolTip>Element(s) containing attribute to be removed</ToolTip>
+          <Default>selector</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>attributeName</ID>
+          <ToolTip>An attribute to remove; as of version 1.7, it can be a space-separated list of attributes.</ToolTip>
+          <Default>attributeName</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="javascript"><![CDATA[$$($selector$).removeAttr($attributeName$);$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

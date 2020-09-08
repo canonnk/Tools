@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.6.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Title>bootstrap on modal hide</Title>
+      <Author>canonnk</Author>
+      <Description>当隐藏bootstrap模态框</Description>
+      <Shortcut>bsonmodalhide</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>desc</ID>
+          <ToolTip>描述</ToolTip>
+          <Default>当模态框关闭时</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>modalid</ID>
+          <ToolTip>id</ToolTip>
+          <Default>xxx</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="javascript">
+        <![CDATA[// $desc$
+        $$('#Modal_$modalid$').on('hide.bs.modal', function (e) {
+  $end$
+})]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

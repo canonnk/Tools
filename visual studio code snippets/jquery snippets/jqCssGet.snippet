@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.6.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>jqCssGet</Title>
+      <Author>John Sheehan (@johnsheehan)</Author>
+      <Description>Get the computed style properties for the first element in the set of matched elements.</Description>
+      <HelpUrl>https://github.com/kspearrin/Visual-Studio-jQuery-Code-Snippets</HelpUrl>
+      <Shortcut>jqCssGet</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>selector</ID>
+          <ToolTip>Element containing style to be retrieved</ToolTip>
+          <Default>selector</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>propertyName</ID>
+          <ToolTip>A CSS property.</ToolTip>
+          <Default>propertyName</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="javascript"><![CDATA[$$($selector$).css($propertyName$);$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

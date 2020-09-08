@@ -1,0 +1,29 @@
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>bootstrap loading button</Title>
+    <Author>canonnk</Author>
+    <Shortcut>loadingbutton</Shortcut>
+    <Description>可以设置loading的按钮</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>btnid</ID>
+        <ToolTip>id</ToolTip>
+        <Default>btn</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="html">
+      <![CDATA[<button type="button" id="$btnid$" data-loading-text="加载中..." class="btn btn-primary" autocomplete="off">$end$</button>
+      <script>$('#myButton').on('click', function () {
+    var $btn = $(this).button('loading')
+    // business logic...
+    $btn.button('reset')
+  })</script>]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>

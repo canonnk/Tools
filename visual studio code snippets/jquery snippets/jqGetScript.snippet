@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.6.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>jqGetScript</Title>
+      <Author>John Sheehan (@johnsheehan)</Author>
+      <Description>Load a JavaScript file from the server using a GET HTTP request, then execute it.</Description>
+      <HelpUrl>https://github.com/kspearrin/Visual-Studio-jQuery-Code-Snippets</HelpUrl>
+      <Shortcut>jqGetScript</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>url</ID>
+          <ToolTip>A string containing the URL to which the request is sent.</ToolTip>
+          <Default>script.js</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="javascript"><![CDATA[$$.getScript("$url$", function (script, textStatus, jqXHR) {
+    $end$
+});]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

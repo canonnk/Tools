@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.6.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>jqMap</Title>
+      <Author>Graham Charles</Author>
+      <Description>Translate all items in an array or object to new array of items.</Description>
+      <HelpUrl>https://github.com/kspearrin/Visual-Studio-jQuery-Code-Snippets</HelpUrl>
+      <Shortcut>jqMap</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>arrayOrObject</ID>
+          <ToolTip>The Array or Object to translate.</ToolTip>
+          <Default>arrayOrObject</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="javascript"><![CDATA[$$.map($arrayOrObject$, function (elementOrValue, indexOrKey) {
+    $end$
+});]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

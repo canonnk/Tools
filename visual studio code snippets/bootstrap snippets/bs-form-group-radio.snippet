@@ -1,0 +1,49 @@
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>bootstrap group radio</Title>
+    <Author>canonnk</Author>
+    <Shortcut>bsradio</Shortcut>
+    <Description>bootstrap表单中的radio</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>inputid</ID>
+        <ToolTip>inputid</ToolTip>
+        <Default>inputid</Default>
+      </Literal>
+      <Literal>
+        <ID>name</ID>
+        <ToolTip>名称</ToolTip>
+        <Default>name</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="html">
+      <![CDATA[  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+		<div class="radio">
+		  <label>
+			<input type="radio" name="$inputid$" id="$inputid$1" value="option1" checked>
+			$end$
+		  </label>
+		</div>
+		<div class="radio">
+		  <label>
+			<input type="radio" name="$inputid$" id="$inputid$2" value="option2">
+			111
+		  </label>
+		</div>
+		<div class="radio disabled">
+		  <label>
+			<input type="radio" name="$inputid$" id="$inputid$3" value="option3" disabled>
+			222
+		  </label>
+		</div>
+    </div>
+  </div>]]></Code>
+  </Snippet>
+</CodeSnippet>

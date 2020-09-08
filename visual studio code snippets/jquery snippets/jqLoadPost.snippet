@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.6.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>jqLoadPost</Title>
+      <Author>John Sheehan (@johnsheehan)</Author>
+      <Description>Load data from the server and place the returned HTML into the matched element.</Description>
+      <HelpUrl>https://github.com/kspearrin/Visual-Studio-jQuery-Code-Snippets</HelpUrl>
+      <Shortcut>jqLoadPost</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>selector</ID>
+          <ToolTip>Element to select</ToolTip>
+          <Default>selector</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>url</ID>
+          <ToolTip>A string containing the URL to which the request is sent.</ToolTip>
+          <Default>/url</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>data</ID>
+          <ToolTip>A plain object that is sent to the server with the request.</ToolTip>
+          <Default>{ name: value, name2: value2 }</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="javascript"><![CDATA[$$($selector$).load("$url$", "$data$", function (response, status, request) {
+    this; // dom element
+    $end$
+});]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

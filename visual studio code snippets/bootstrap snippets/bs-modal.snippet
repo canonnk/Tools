@@ -1,0 +1,52 @@
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>bootstrap modal</Title>
+    <Author>canonnk</Author>
+    <Shortcut>bsmodal</Shortcut>
+    <Description>bootstrap modal</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>desc</ID>
+        <ToolTip>描述</ToolTip>
+        <Default>模态框</Default>
+      </Literal>
+      <Literal>
+        <ID>modalid</ID>
+        <ToolTip>id</ToolTip>
+        <Default>xxx</Default>
+      </Literal>
+      <Literal>
+        <ID>title</ID>
+        <ToolTip>标题</ToolTip>
+        <Default>xxx</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="html">
+      <![CDATA[<!-- 描述：$desc$
+      id：$modalid$
+      标题：$title$-->
+<div class="modal fade" id="Modal_$modalid$" tabindex="-1" role="dialog" aria-labelledby="Modal_$modalid$Label" data-backdrop="static" data-keyboard="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="Modal_$modalid$Label">$title$</h4>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+</div>]]></Code>
+  </Snippet>
+</CodeSnippet>

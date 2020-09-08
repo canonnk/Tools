@@ -1,0 +1,33 @@
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>bootstrap group textarea</Title>
+    <Author>canonnk</Author>
+    <Shortcut>bstextarea</Shortcut>
+    <Description>bootstrap 表单中的 textarea</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>inputid</ID>
+        <ToolTip>inputid</ToolTip>
+        <Default>inputid</Default>
+      </Literal>
+      <Literal>
+        <ID>desc</ID>
+        <ToolTip>desc</ToolTip>
+        <Default>desc</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="html">
+      <![CDATA[<div class="form-group">
+    <label for="$inputid$" class="col-sm-2 control-label">$desc$</label>
+    <div class="col-sm-10">
+      <textarea class="form-control" id="$inputid$" name="$inputid$" v-model="$inputid$" placeholder="$desc$"></textarea>
+    </div>
+  </div>$end$]]></Code>
+  </Snippet>
+</CodeSnippet>

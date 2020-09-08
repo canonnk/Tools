@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.6.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>jquery ajax loading</Title>
+      <Author>canonnk</Author>
+      <Description>jquery ajax loading</Description>
+      <Shortcut>jqajax3</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>url</ID>
+          <ToolTip>The URL for the request</ToolTip>
+          <Default>PageUrl.xxxx</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>method</ID>
+          <ToolTip>HTTP Method to use (GET, POST, etc.)</ToolTip>
+          <Default>POST</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>data</ID>
+          <ToolTip>Data to send (querystring)</ToolTip>
+          <Default>{}</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>dataType</ID>
+          <ToolTip>Options: xml|json|jsonp|text|html|script</ToolTip>
+          <Default>json</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>url</ID>
+          <ToolTip>URL to call</ToolTip>
+          <Default>/url</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="javascript"><![CDATA[var loading =
+	bootbox.dialog({
+		title: '处理中',
+		message: '<p><i class="fa fa-spin fa-spinner"></i> 正在创建，请稍后 </p>',
+		closeButton: false
+	});
+$$.ajax({
+    type: "$method$",
+    url: $url$,
+    data: $data$,
+	async: true,
+    dataType: "$dataType$",
+    success: function (event,xhr,options) {
+		if (event.Status == true) {
+			$end$
+			toastrSuccess("操作成功", "成功");
+		} else {
+			toastrError(event.Message, "错误");
+		}
+    },
+	error: function(event,xhr,options,exc) {
+		toastrError("系统错误，请联系管理员！", "错误");
+	},
+	complete: function(event,xhr,options) {
+		loading.modal("hide");
+		$$("#Modal_xxxxx").modal("hide");
+	}
+});]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

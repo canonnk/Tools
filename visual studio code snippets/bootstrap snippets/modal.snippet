@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.6.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>bootstrap modal</Title>
+      <Author>John Sheehan (@johnsheehan)</Author>
+      <Description>Perform an asynchronous HTTP (Ajax) request.</Description>
+      <HelpUrl>https://github.com/kspearrin/Visual-Studio-jQuery-Code-Snippets</HelpUrl>
+      <Shortcut>modal</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>ID</ID>
+          <ToolTip>The URL for the request</ToolTip>
+          <Default>XXX</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>title</ID>
+          <ToolTip>HTTP Method to use (GET, POST, etc.)</ToolTip>
+          <Default>标题</Default>
+          <Function>
+          </Function>
+        </Literal>
+		<Literal Editable="true">
+          <ID>desc</ID>
+          <ToolTip>HTTP Method to use (GET, POST, etc.)</ToolTip>
+          <Default>描述</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="html"><![CDATA[<!-- $desc$ -->
+<div class="modal fade" id="Modal_$ID$" tabindex="-1" role="dialog" aria-labelledby="Modal_$ID$Label">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="Modal_$ID$Label">$title$</h4>
+            </div>
+            <div class="modal-body">
+                $end$
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

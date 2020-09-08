@@ -1,0 +1,36 @@
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>bootstrap group check</Title>
+    <Author>canonnk</Author>
+    <Shortcut>bscheck</Shortcut>
+    <Description>bootstrap表单中的check</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>inputid</ID>
+        <ToolTip>inputid</ToolTip>
+        <Default>inputid</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="html">
+      <![CDATA[  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" id="$inputid$1" name="$inputid$"> $end$
+        </label>
+      </div>
+      <div class="checkbox">
+      <label>
+        <input type="checkbox" value="" id="$inputid$2" name="$inputid$"> xxx
+      </label>
+    </div>
+    </div>
+  </div>]]></Code>
+  </Snippet>
+</CodeSnippet>

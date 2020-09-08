@@ -1,0 +1,31 @@
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>bootstrap input group</Title>
+    <Author>canonnk</Author>
+    <Shortcut>bsinputgroup</Shortcut>
+    <Description>输入框组</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>inputid</ID>
+        <ToolTip>id</ToolTip>
+        <Default>btn</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="html">
+      <![CDATA[<div class="row"><div class="col-sm-12"><div class="input-group">
+	<span class="input-group-addon">
+        <input type="checkbox" aria-label="...">
+    </span>
+	<input type="text" class="form-control" placeholder="$end$" id="$inputid$" name="$inputid$" v-model="$inputid$">
+	<span class="input-group-btn">
+		<button class="btn btn-default" type="button">搜索</button>
+    </span>
+</div></div></div>]]></Code>
+  </Snippet>
+</CodeSnippet>

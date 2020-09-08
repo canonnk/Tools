@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.6.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>bootstrapValidator</Title>
+      <Author>John Sheehan (@johnsheehan)</Author>
+      <Description>Perform an asynchronous HTTP (Ajax) request.</Description>
+      <HelpUrl>https://github.com/kspearrin/Visual-Studio-jQuery-Code-Snippets</HelpUrl>
+      <Shortcut>bv</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>FormID</ID>
+          <ToolTip>The URL for the request</ToolTip>
+          <Default>FormID.xxxxx</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="javascript"><![CDATA[$$("$FormID$").bootstrapValidator({
+    excluded: ':disabled, :hidden, :not(:visible), [readonly]',
+    feedbackIcons: {
+        valid: 'glyphicon glyphicon-ok',
+        invalid: 'glyphicon glyphicon-remove',
+        validating: 'glyphicon glyphicon-refresh'
+    },
+    fields: {
+        GroupClassCode: {
+            validators: {
+                notEmpty: { message: '代码不能为空！！' },
+                remote: {
+                    delay: 500, type: 'post',
+                    message: '代码重复，请重新输入！！',
+                    url: Url.GroupClassCodeValidator
+                }
+            }
+        },
+        GroupClassName: { validators: { notEmpty: { message: '名称不能为空！！' } } }
+    }
+}).on('success.form.bv', function (e) {
+    // 提交表单
+    e.preventDefault();
+    var $$form = $$(e.target);
+    var bv = $$form.data('bootstrapValidator');
+    var serializeData = $$form.serialize();
+
+    blockUIByTagID("pageMain");
+    $$.ajax({
+        type: "POST",
+        url: PageUrl.xxxx,
+        data: serializeData,
+        async: true,
+        dataType: "json",
+        success: function (event, xhr, options) {
+            if (event.status == "OK") {
+
+                toastrSuccess("操作成功", "成功");
+            } else {
+                toastrError(event.message, "错误");
+            }
+        },
+        error: function (event, xhr, options, exc) {
+            toastrError("系统错误，请联系管理员！", "错误");
+        },
+        complete: function (event, xhr, options) {
+            unblockUIByTagID("pageMain");
+            $$("#Modal_xxxxx").modal("hide");
+        }
+    });
+});]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
